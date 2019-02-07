@@ -7,7 +7,7 @@ let sum = 0;
 
 while (startValue <= stopValue) {
   sum += startValue;
-  startValue++;
+  startValue += 1;
 }
 
 console.log(sum);
