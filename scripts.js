@@ -20,11 +20,12 @@ startValue = Number(startValue);
 // We create, name and instantiate a 'sum' variable to keep track of the total
 let sum = 0;
 
-// We create a 'while' loop that will run until the condition inside the parentheses is true.
+// We create a 'while' loop that will run until the condition inside the parentheses is false.
 while (startValue <= stopValue) {
   /**
-   * All code below the '{' and the '}' below will continuously run inside this 'while' loop WHILE the condition inside the parentheses above remains true.
+   * All code between the '{' and the '}' below will continuously run inside this 'while' loop WHILE the condition inside the parentheses above remains true.
    * JS will not proceed anywhere else while this is happening.
+   * This is known as BLOCKING.
    */
   sum += startValue;
   startValue += 1;
