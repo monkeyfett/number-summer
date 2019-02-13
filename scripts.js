@@ -1,5 +1,4 @@
 /**
- *  2. "" "" from #stop.
  *  3. Listen for a submit and start adding.
  *  4. Update <output> to show the total.
  */
@@ -10,6 +9,14 @@ console.log(stopValue);
 // querySelector() expects to get a CSS-style selector
 const startValue = document.querySelector("#start").value;
 console.log(startValue);
+
+document.querySelector("form").addEventListener(
+  "submit",
+  // Add a callback fxn.
+  () => {
+    console.log("submitted");
+  }
+);
 
 // startValue = Number(startValue);
 
