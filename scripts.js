@@ -1,21 +1,23 @@
 /**
- *  1. Capture user input from #start.
  *  2. "" "" from #stop.
  *  3. Listen for a submit and start adding.
  *  4. Update <output> to show the total.
  */
 
-const stopValue = prompt("How high do you want to sum numbers up until?");
+const stopValue = document.querySelector("#stop").value;
+console.log(stopValue);
 
-let startValue = prompt("Where do you want to start the summing from?");
+// querySelector() expects to get a CSS-style selector
+const startValue = document.querySelector("#start").value;
+console.log(startValue);
 
-startValue = Number(startValue);
+// startValue = Number(startValue);
 
-let sum = 0;
+// let sum = 0;
 
-while (startValue <= stopValue) {
-  sum += startValue;
-  startValue += 1;
-}
+// while (startValue <= stopValue) {
+//   sum += startValue;
+//   startValue += 1;
+// }
 
-console.log(sum);
+// console.log(sum);
