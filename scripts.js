@@ -9,17 +9,17 @@
  * Next, we access the 'value' property of this element.
  */
 const stopValue = document.querySelector("#stop").value;
-console.log(stopValue);
 
 // querySelector() expects to get a CSS-style selector
 const startValue = document.querySelector("#start").value;
-console.log(startValue);
 
 // Listen for a 'submit' event on the 'form.'
 document.querySelector("form").addEventListener(
   "submit",
-  // Add a CALLBACK fxn.
-  () => {
+  // Capture the event that was fired and prevent the default from following its default behavior.
+  e => {
+    // console.log(e);
+    e.preventDefault();
     console.log("submitted");
   }
 );
