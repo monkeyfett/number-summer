@@ -3,13 +3,16 @@
  *  4. Update <output> to show the total.
  */
 
+const output = document.querySelector("output");
+
 // Listen for a 'submit' event on the 'form.'
 document.querySelector("form").addEventListener(
   "submit",
   // Capture the event that was fired and prevent the default from following its default behavior.
   e => {
-    // console.log(e);
     e.preventDefault();
+
+    // We use the 'value' property on <input> elements.
     const stopValue = document.querySelector("#stop").value;
     let startValue = document.querySelector("#start").value;
     startValue = Number(startValue);
@@ -21,6 +24,7 @@ document.querySelector("form").addEventListener(
       startValue += 1;
     }
 
-    console.log(sum);
+    // Use 'textContent' property to get the text inside of an HTML element - this means the stuff between the tags.
+    output.textContent = sum;
   }
 );
