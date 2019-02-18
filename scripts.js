@@ -11,18 +11,16 @@ document.querySelector("form").addEventListener(
     // console.log(e);
     e.preventDefault();
     const stopValue = document.querySelector("#stop").value;
-    const startValue = document.querySelector("#start").value;
-    console.log(stopValue, startValue);
+    let startValue = document.querySelector("#start").value;
+    startValue = Number(startValue);
+
+    let sum = 0;
+
+    while (startValue <= stopValue) {
+      sum += startValue;
+      startValue += 1;
+    }
+
+    console.log(sum);
   }
 );
-
-// startValue = Number(startValue);
-
-// let sum = 0;
-
-// while (startValue <= stopValue) {
-//   sum += startValue;
-//   startValue += 1;
-// }
-
-// console.log(sum);
